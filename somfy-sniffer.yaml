@@ -29,16 +29,40 @@ wifi:
 captive_portal:
     
 
+
+time:
+  - platform: sntp
+    id: sntp_time    
+
 sensor:
 - platform: custom
   lambda: |-
     auto my_sensor = new SomfySniffer();
     App.register_component(my_sensor);
-    return {my_sensor->adress_sensor, my_sensor->controlCode_sensor, my_sensor->rollingCode_sensor, my_sensor->time_sensor};
+    return {my_sensor->adress_sensor, my_sensor->controlCode_sensor, my_sensor->rollingCode_sensor};
+
 
 
   sensors:
     - name: "somfy_adress"
+      force_update: True
+      filters: 
+        - debounce: 0.3s
     - name: "somfy_controlCode"
+      force_update: True
+      filters: 
+        - debounce: 0.3s
     - name: "somfy_rollingCode"
-    - name: "somfy_lastTimeUpdate"
+      force_update: True
+      filters: 
+        - debounce: 0.3s
+        - lambda: id(somfy_lastTimeUpdate).publish_state(std::to_string(id(sntp_time).now().timestamp)); return x; 
+        
+
+
+text_sensor:
+  - platform: template
+    name: "somfy_lastTimeUpdate"
+    id: "somfy_lastTimeUpdate"
+
+
