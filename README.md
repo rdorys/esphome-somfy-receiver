@@ -19,6 +19,14 @@ I use :
 - XY-MK-5V receiver
 
 The XY-MK-5V is a pretty cheap receiver, it works well but as RTS is modulated over 433.42MHz, you won't get a better range than a few meter with it.
+## Wiring
+
+The important point is to link DATA pin of the receiver with D1 pin.
+If you change this wiring, be sure to adapt the code at https://github.com/rdorys/esphome-somfy-receiver/blob/17990dc6e11c2f40b47b40d1879e42ff74c75f1d/somfy_sniff/main.h#L8
+
+![image](https://user-images.githubusercontent.com/46494654/210221803-fdbf3ddf-060e-404d-a9fd-691217b232d8.png)
+
+
 
 I recently bought https://www.nodo-shop.nl/en/transmitters-and-receivers/194-aurel-tranceiver-rtx-mid-5v.html
 I will keep you in touch about new range.
