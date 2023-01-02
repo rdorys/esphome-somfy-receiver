@@ -24,7 +24,7 @@ class SomfySniffer: public PollingComponent,  public Sensor {
       Sensor *adress_sensor = new Sensor();
       Sensor *controlCode_sensor = new Sensor();
       Sensor *rollingCode_sensor = new Sensor();
-      Sensor *time_sensor = new Sensor();
+      //TimeSensor *time_sensor = new Sensor();
 
 
   static void IRAM_ATTR pinChanged()
@@ -81,7 +81,7 @@ class SomfySniffer: public PollingComponent,  public Sensor {
       adress_sensor ->publish_state(add);
       controlCode_sensor -> publish_state(control);
       rollingCode_sensor ->publish_state(rolling);
-      time_sensor->publish_state(micros());
+      //time_sensor->publish_state(micros());
       //set flag to zero not to publish every X ms
       flag = 0;
     }
