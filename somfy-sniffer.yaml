@@ -39,12 +39,12 @@ sensor:
   lambda: |-
     auto my_sensor = new SomfySniffer();
     App.register_component(my_sensor);
-    return {my_sensor->adress_sensor, my_sensor->controlCode_sensor, my_sensor->rollingCode_sensor};
+    return {my_sensor->address_sensor, my_sensor->controlCode_sensor, my_sensor->rollingCode_sensor};
 
 
 
   sensors:
-    - name: "somfy_adress"
+    - name: "somfy_address"
       force_update: True
       filters: 
         - debounce: 0.3s
