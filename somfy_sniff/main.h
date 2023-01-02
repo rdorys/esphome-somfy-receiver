@@ -1,3 +1,5 @@
+//This code is an adaptation of https://github.com/walterbrebels/somfy-rts/blob/master/src/main.cpp to be used in ESPHome.
+
 #include "esphome.h"
 
 #include "receiver.h"
@@ -21,7 +23,7 @@ size_t pulseIndex2;
 
 class SomfySniffer: public PollingComponent,  public Sensor {
   public: 
-      Sensor *adress_sensor = new Sensor();
+      Sensor *address_sensor = new Sensor();
       Sensor *controlCode_sensor = new Sensor();
       Sensor *rollingCode_sensor = new Sensor();
       //TimeSensor *time_sensor = new Sensor();
@@ -78,7 +80,7 @@ class SomfySniffer: public PollingComponent,  public Sensor {
 
       ESP_LOGI("Debug","data about to be published, adresse is %u", add);
       //publishing all sensors
-      adress_sensor ->publish_state(add);
+      address_sensor ->publish_state(add);
       controlCode_sensor -> publish_state(control);
       rollingCode_sensor ->publish_state(rolling);
       //time_sensor->publish_state(micros());
