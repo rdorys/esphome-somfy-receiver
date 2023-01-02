@@ -32,6 +32,7 @@ The project results in four sensors in Home Assistant :
 - ControlCode is the order sent by the remote, from https://pushstack.wordpress.com/somfy-rts-protocol/ we have :
 
 ![image](https://user-images.githubusercontent.com/46494654/210218489-eafac4cf-3a19-4746-b353-35d43748a5f3.png)
+
 In pratice, I only have 1,2 or 4 (STOP, UP or DOWN).
-- Rolling code, which increases by one each time (not very useful for me)
-- lastTimeUpdate, which gives you the timestamp of last update.
+- RollingCode, which increases by one each time (not very useful for me)
+- LastTimeUpdate, which gives you the timestamp of last update (may be useful to compute new blinds position).
