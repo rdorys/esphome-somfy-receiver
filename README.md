@@ -5,7 +5,7 @@ ESPHome configuration files and tutorial to detect whenever a Somfy RTS remote i
 I have a lot of Somfy blinds (RTS protocol) at home I control with a RFXCOM in Home Assistant.
 All the Somfy remotes are usable at home because I don't want to rely only on Home Assistant and RFXCOM.
 
-I needed a way to dectect whenever one of the remotes were pressed in order to determine the current position of any blinds.
+I needed a way to dectect whenever one of the remotes was pressed in order to determine the current position of any blinds.
 This is actually not doable with a RFXCOM as Somfy works on 443.42MHz and the RFXCOM only listens on 443.92MHz.
 The project doesn't describe how to determine this position. It only describes how to use the hardware and how to configure ESPHome.
 
