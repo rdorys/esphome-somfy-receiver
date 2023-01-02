@@ -26,7 +26,7 @@ I will keep you in touch about new range.
 # Output
 The project results in four sensors in Home Assistant :
 
-![image](https://user-images.githubusercontent.com/46494654/210217882-6b7367fe-08da-4b4c-abab-603963c85f4a.png)
+![image](https://user-images.githubusercontent.com/46494654/210219960-e3497f3b-1e02-4e0e-866b-e682c9d68c0d.png)
 
 - Address is the unique ID of the remote, you can use it to know what remote has been pressed.
 - ControlCode is the order sent by the remote, from https://pushstack.wordpress.com/somfy-rts-protocol/ we have :
